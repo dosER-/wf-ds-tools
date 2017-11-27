@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 PACKAGE_NAME = 'wf-ds-tools'
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 
 setup(

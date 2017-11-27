@@ -38,7 +38,7 @@ OR
 $ dst --help
 usage: ds_ctl.py [-h] {dtc_fit} ...
 
-DS CTL (v.1.0.2)
+DS CTL (v.1.0.3)
 
 positional arguments:
   {dtc_fit}
@@ -95,7 +95,7 @@ optional arguments:
 **2)** All resource limits are ulimit limits
 
 **-cpu**:
-````
+```
  resource.RLIMIT_CPU
     The maximum amount of processor time (in seconds) that a process can use. If this limit is exceeded, a SIGXCPU signal is sent to the process.
 ```
