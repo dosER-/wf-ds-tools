@@ -38,7 +38,7 @@ OR
 $ dst --help
 usage: ds_ctl.py [-h] {dtc_fit} ...
 
-DS CTL (v.1.0.3)
+DS CTL (v.1.0.4)
 
 positional arguments:
   {dtc_fit}

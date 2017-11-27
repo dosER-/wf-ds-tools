@@ -5,6 +5,11 @@ Cangelog
 <- insert new version here
 
 -------------
+version 1.0.4
+-------------
+1. README.md: add new lines to fix github md render
+
+-------------
 version 1.0.3
 -------------
 1. README.md: fix number of `
