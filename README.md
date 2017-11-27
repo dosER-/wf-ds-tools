@@ -95,27 +95,36 @@ optional arguments:
 **2)** All resource limits are ulimit limits
 
 **-cpu**:
+
 ```
  resource.RLIMIT_CPU
     The maximum amount of processor time (in seconds) that a process can use. If this limit is exceeded, a SIGXCPU signal is sent to the process.
 ```
+
 **-rss**:
+
 ```
 resource.RLIMIT_RSS
     The maximum resident set size that should be made available to the process.
 ```
+
 **-heap**:
+
 ```
 resource.RLIMIT_DATA
     The maximum size (in bytes) of the process’s heap.
 
 ```
+
 **-stack**:
+
 ```
 resource.RLIMIT_STACK
     The maximum size (in bytes) of the call stack for the current process. This only affects the stack of the main thread in a multi-threaded process.
 ```
+
 **3)** To add limits (one of dstools.utils.limits.DEFAULT_ARGS key, for example *'heap'*) to cmd arguments you need to add limit description to dstools.utils.limits.ARGS list
+
 ```
 DEFAULT_KWARGS = {
     'max_cpu_seconds': None,
@@ -124,6 +133,7 @@ DEFAULT_KWARGS = {
     'max_stack': None,
 }
 ```
+
 ```
 ARGS = [
     ...
