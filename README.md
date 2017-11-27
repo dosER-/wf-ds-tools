@@ -24,8 +24,8 @@ OR
 ### Build package
 1. ```build/do.sh build_pkg```
 
-### install
-```pip install dist/wf-ds-tools-<version>.tar.gz
+### Install
+```pip install dist/wf-ds-tools-<version>.tar.gz```
 
 ## Description
 ### Brief
@@ -49,6 +49,7 @@ optional arguments:
 ```
 
 #### dtc_fit
+
 ```
 $ dst dtc_fit --help
 usage: ds_ctl.py dtc_fit [-h] [-v] [-D] [-cpu MAX_CPU_SECONDS] [-rss MAX_RSS]
