@@ -38,7 +38,7 @@ OR
 $ dst --help
 usage: ds_ctl.py [-h] {dtc_fit} ...
 
-DS CTL (v.1.0.0)
+DS CTL (v.1.0.2)
 
 positional arguments:
   {dtc_fit}
@@ -86,3 +86,53 @@ optional arguments:
                         node (default: 1)
 
 ```
+
+##### Remarks
+**0)** All tools work in **Dry-run** mode by default
+
+**1)** Default values of limits (cpu, rss) is None. If limit is None then system resource limit is not changed.
+
+**2)** All resource limits are ulimit limits
+
+**-cpu**:
+````
+ resource.RLIMIT_CPU
+    The maximum amount of processor time (in seconds) that a process can use. If this limit is exceeded, a SIGXCPU signal is sent to the process.
+```
+**-rss**:
+```
+resource.RLIMIT_RSS
+    The maximum resident set size that should be made available to the process.
+```
+**-heap**:
+```
+resource.RLIMIT_DATA
+    The maximum size (in bytes) of the process’s heap.
+
+```
+**-stack**:
+```
+resource.RLIMIT_STACK
+    The maximum size (in bytes) of the call stack for the current process. This only affects the stack of the main thread in a multi-threaded process.
+```
+**3)** To add limits (one of dstools.utils.limits.DEFAULT_ARGS key, for example *'heap'*) to cmd arguments you need to add limit description to dstools.utils.limits.ARGS list
+```
+DEFAULT_KWARGS = {
+    'max_cpu_seconds': None,
+    'max_heap': None,
+    'max_rss': None,
+    'max_stack': None,
+}
+```
+```
+ARGS = [
+    ...
+    Arg(
+        flags=['-heap', '--max-heap'],
+        dest='max_heap', type=int, choices=None,
+        help='Max used memory for data in MB (default: {default}MB, (-1: INF))'
+    ),
+]
+```
+
+**4)** To add DTC fit arguments (one of dstools.tree.dtc.DEFAULT_KWARGS key) to cmd args you need to add argument description to dstools.tree.dtc.ARGS (in the same way as in the point 3)

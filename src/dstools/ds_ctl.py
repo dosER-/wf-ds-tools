@@ -17,7 +17,7 @@ __all__ = (
 )
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 DEFAULT_VERBOSE = False
 DEFAULT_DRY_RUN = True
