@@ -1,0 +1,7 @@
+*.pyc
+*.pyx
+*.pyo
+build/venv/*
+dist
+wf_ds_tools.egg-info
+.git

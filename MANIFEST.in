@@ -1,0 +1,4 @@
+include MANIFEST.in README.md CHANGELOG src/dst
+exclude *.pyc *.pyo *.pyx
+recursive-exclude src/tests *
+prune *.pyc

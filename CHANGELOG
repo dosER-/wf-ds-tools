@@ -1,0 +1,12 @@
+===========
+Cangelog
+===========
+-------------
+<- insert new version here
+
+-------------
+version 1.0.0
+-------------
+1. DTClassifier fit method was implemented
+2. wf-ds-tools package was prepared
+3. Toolset for buid/test/build_pkg was implemented
